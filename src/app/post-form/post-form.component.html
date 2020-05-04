@@ -1,1 +1,18 @@
-<p>post-form works!</p>
+<div class="bg">
+    <div class="form-bg">
+        <i class="fas fa-times fa-2x" (click)="close(popUp)"></i>
+        <form>
+            <div>
+                <label>Title</label>
+                <br>
+                <input name="title" type="text" placeholder="Post title" [(ngModel)]="title"/>
+            </div>
+            <div>
+                <label>Thought</label>
+                <br>
+                <textarea name="body" [(ngModel)]="textInput"></textarea>
+            </div>
+            <button (click)="submit(titleInput, textInput)">Add Post</button>
+        </form>
+    </div>
+</div>

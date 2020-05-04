@@ -1,11 +1,21 @@
-<p>My Thoughts</p>
-
-<div class ="posts">
-    <ng-container *ngFor ='let p of post'>
-        {{p.title}} 
-        <br>
+  
+<div class="list-container">
+    <h2>My thoughts</h2>
+    <button (click)="popupInit()">New Thought +</button>
+    <br>
+    <post *ngFor ='let p of post'>
+      
+      <h3> {{p.title}} </h3>
+     
         {{p.thought}}
-        <br>
-        <br>
-    </ng-container>
+    
+       
+    </post>
 </div>
+<app-post-form
+    *ngIf="popUp"
+    [form]="formShow"
+    [popUp]="popUp"
+    (popUpChanged)="onClose()"
+    (submitted)="onSubmit($event)"
+></app-post-form>

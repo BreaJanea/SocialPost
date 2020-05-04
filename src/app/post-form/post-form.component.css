@@ -1,0 +1,10 @@
+.form-bg{
+background-color:#B1DDEA;
+width: 50%;
+
+}
+
+input, textarea {
+    width: 70%;
+    border-radius: 4px;
+}

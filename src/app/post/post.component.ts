@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Post } from '../interfaces/post';
 
 @Component({
   selector: 'app-post',
@@ -11,5 +12,8 @@ export class PostComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  @Input() post: Post;
+  @Output() deleted = new EventEmitter<boolean>();
 
+  
 }
