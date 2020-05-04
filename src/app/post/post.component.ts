@@ -8,13 +8,17 @@ import { Post } from '../interfaces/post';
 })
 export class PostComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit(): void {
-    
-  }
   @Input() post: Post;
   @Output() deleted = new EventEmitter<boolean>();
 
-  
+  constructor() { }
+
+  ngOnInit(): void {
+
+  }
+
+  deletePost(): void {
+    this.deleted.emit(true);
+  }
+
 }

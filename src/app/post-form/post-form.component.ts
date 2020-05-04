@@ -7,24 +7,25 @@ import { Post } from '../interfaces/post';
   styleUrls: ['./post-form.component.css']
 })
 export class PostFormComponent implements OnInit {
-  title = 'Post-Form'
+  @Input() form: boolean;
+  @Input() popUp: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  @Input() form: boolean;
-  @Input() popUp: boolean;
+  
+  title:string  = "";
   titleInput: string = "";
   thoughtInput: string = "";
   textInput: string = "";
   post: Post;
   @Output() submitted = new EventEmitter<Post>();
   @Output() popUpChanged = new EventEmitter<boolean>();
+
   close = (popUp) => {
     this.popUpChanged.emit(true);
-}
+  }
 submit = (newTitle: string, newThought: string) => {
     const post:Post = { title: newTitle, thought: newThought};
     this.submitted.emit(post);
