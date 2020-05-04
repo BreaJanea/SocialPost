@@ -14,8 +14,6 @@
 </div>
 <app-post-form
     *ngIf="popUp"
-    [form]="formShow"
-    [popUp]="popUp"
     (popUpChanged)="onClose()"
     (submitted)="onSubmit($event)"
 ></app-post-form>

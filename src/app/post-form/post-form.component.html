@@ -1,18 +1,18 @@
 <div class="bg">
     <div class="form-bg">
-        <i class="fas fa-times fa-2x" (click)="close(popUp)"></i>
+        <!-- <i class="fas fa-times fa-2x" (click)="close()"></i> -->
         <form>
             <div>
                 <label>Title</label>
                 <br>
-                <input name="title" type="text" placeholder="Post title" [(ngModel)]="title"/>
+                <input name="title" type="text" placeholder="Post title" [(ngModel)]="titleInput"/>
             </div>
             <div>
                 <label>Thought</label>
                 <br>
-                <textarea name="body" [(ngModel)]="textInput"></textarea>
+                <textarea name="body" [(ngModel)]="thoughtInput"></textarea>
             </div>
-            <button (click)="submit(titleInput, textInput)">Add Post</button>
+            <button (click)="submitPost()">Add Post</button>
         </form>
     </div>
 </div>
