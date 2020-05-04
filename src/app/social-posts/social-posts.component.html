@@ -3,14 +3,14 @@
     <h2>My thoughts</h2>
     <button (click)="popupInit()">New Thought +</button>
     <br>
-    <post *ngFor ='let p of post'>
+    <div *ngFor ='let p of post'>
       
       <h3> {{p.title}} </h3>
      
         {{p.thought}}
     
        
-    </post>
+    </div>
 </div>
 <app-post-form
     *ngIf="popUp"
