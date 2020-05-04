@@ -14,14 +14,14 @@ export class SocialPostsComponent implements OnInit {
 
   show: boolean = false;
 
-  post =[
+  posts =[
     {
       title: 'Fashion',
       thought: 'I love fashion'
     },
     {
       title: 'Food',
-      thought: 'I can\'t for dinner'
+      thought: 'I can\'t wait for dinner'
     },
     {
       title: 'Dev.Build',
@@ -29,16 +29,22 @@ export class SocialPostsComponent implements OnInit {
     },
   ];
 
-  formShow: boolean = true;
-  popUp: boolean = false;
-  popupInit = () => {
-      this.popUp = true;
-  }
-  onClose = () => {
-      this.popUp = false;
-  }
+  shouldShowForm: boolean = false;
+ 
   onSubmit = ($event) => {
-      this.post.unshift($event);
-      this.popUp = false;
+      this.posts.unshift($event);
+      this.shouldShowForm = false;
   }
+
+  onDelete(index:number) {
+    this.posts = [
+      ...this.posts.slice(0,index),
+      ...this.posts.slice(index+1, this.posts.length)
+    ]
+  }
+
+  showForm():void {
+    this.shouldShowForm = true;
+  }
+
 }
