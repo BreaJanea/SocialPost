@@ -1,4 +1,4 @@
-  
+
 <div class="list-container">
     <h2>My thoughts</h2>
     <button (click)="showForm()">New Thought +</button>
@@ -6,8 +6,19 @@
     <app-post *ngFor ='let p of posts; let i = index' [post]="p" (deleted)="onDelete(i)">
     </app-post>
 </div>
-<app-post-form
-    *ngIf="shouldShowForm"
-    (submitted)="onSubmit($event)"
-    (closed)="hideForm()"
-></app-post-form>
+
+<div>
+    <div id="postForm">
+        <app-post-form 
+        *ngIf="shouldShowForm"
+        (submitted)="onSubmit($event)"
+        (closed)="hideForm()"
+        ></app-post-form>
+    </div>
+
+    <div class="box" [ngClass]="{'visible': shouldShowForm}" (click)="hideForm()">
+    </div>  
+
+</div>
+
+
