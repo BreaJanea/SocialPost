@@ -1,9 +1,28 @@
 .form-bg{
     background-color:#B1DDEA;
-    width: 50%;
+    width: 90%;
+    height: 90%;
+    margin: auto;
 }
 
-input, textarea {
-    width: 70%;
-    border-radius: 4px;
+.bg{
+    height: 90%;
+}
+
+
+
+
+button{
+    display: block;
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+    border-radius: 5px;;
+}
+
+label{
+    padding-left: 20px;
 }

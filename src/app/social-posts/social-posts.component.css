@@ -16,6 +16,20 @@
    pointer-events: all; 
 }
 
+button{
+    display: block;
+    margin: auto;
+    width: 700px;
+    height: 40px;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    text-align: center;
+    border-radius: 5px;;
+    
+
+}
+
 #postForm {
     height: 200px;
     width: 500px;
@@ -24,4 +38,23 @@
     top: 100px;
     right:25%;
     left: 25%;
+}
+
+.list-container{
+    background-color: white;
+    width: 700px;
+    margin: auto;
+    border-radius: 5px;
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+ 
+}
+
+h2{
+    color: rgb(3, 169, 244);
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: homemade apple;
+
 }

@@ -1,9 +1,14 @@
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+
+
+<h2>My thoughts</h2>
+<button (click)="showForm()">New Thought </button>
+<br>
 
 <div class="list-container">
-    <h2>My thoughts</h2>
-    <button (click)="showForm()">New Thought +</button>
     <br>
     <app-post *ngFor ='let p of posts; let i = index' [post]="p" (deleted)="onDelete(i)">
+  
     </app-post>
 </div>
 
