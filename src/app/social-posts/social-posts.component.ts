@@ -47,4 +47,8 @@ export class SocialPostsComponent implements OnInit {
     this.shouldShowForm = true;
   }
 
+  hideForm():void {
+    this.shouldShowForm = false;
+  }
+
 }

@@ -9,6 +9,7 @@ import { Post } from '../interfaces/post';
 export class PostFormComponent implements OnInit {
 
   @Output() submitted = new EventEmitter<Post>();
+  @Output() closed = new EventEmitter();
 
   titleInput: string = "";
   thoughtInput: string = "";
@@ -21,6 +22,10 @@ export class PostFormComponent implements OnInit {
   submitPost() {
     const post:Post = { title: this.titleInput, thought: this.thoughtInput};
     this.submitted.emit(post);
+  }
+
+  close() {
+    this.closed.emit();
   }
 
 }

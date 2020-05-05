@@ -9,4 +9,5 @@
 <app-post-form
     *ngIf="shouldShowForm"
     (submitted)="onSubmit($event)"
+    (closed)="hideForm()"
 ></app-post-form>
